@@ -1,0 +1,44 @@
+/* src/components/CertificatesAndAwards.css */
+.certificates-awards {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .certificates-awards h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .certificates,
+  .awards {
+    margin-top: 20px;
+  }
+  
+  .certificates h3,
+  .awards h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .certificates ul,
+  .awards ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .certificates li,
+  .awards li {
+    font-size: 1.2rem;
+    color: #666;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  

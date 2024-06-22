@@ -1,0 +1,65 @@
+/* src/Contact.css */
+
+.contact {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #282c34;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .contact input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact button {
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact button:hover {
+    background-color: #ff5733;
+  }
+  

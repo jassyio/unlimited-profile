@@ -1,0 +1,76 @@
+.home {
+  padding: 0px 0; /* Add padding to reduce empty vertical space */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure sections are evenly spaced */
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 0px; /* Reduce margin for better spacing */
+}
+
+.welcome h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #282c34;
+}
+
+.welcome .tagline {
+  font-size: 1.5rem;
+  color: #ff5733;
+  margin-bottom: 0px; /* Add some space below the tagline */
+}
+
+.mission-vision {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+  flex-grow: 1; /* Allow this section to grow */
+}
+
+.mission, .vision {
+  width: 45%;
+  margin-bottom: 0px;
+}
+
+.mission h2, .vision h2 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+  color: #282c34;
+}
+
+.mission p, .vision p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.hire-me {
+  text-align: center;
+  margin-bottom: 0px; /* Reduce margin for better spacing */
+}
+
+.hire-me h2 {
+  font-size: 2rem;
+  margin-bottom: 0px;
+  color: #282c34;
+}
+
+.hire-me p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.hire-me a {
+  color: #ff5733;
+  text-decoration: none;
+}
+
+.hire-me a:hover {
+  text-decoration: underline;
+}
