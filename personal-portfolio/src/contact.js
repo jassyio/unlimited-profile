@@ -44,7 +44,12 @@ function Contact() {
     // Log templateParams for debugging
     console.log('Template Params:', templateParams);
 
-    emailjs.send('service_g19ns1r', 'template_zg3g41c', templateParams, 'klkuiY3Xkcj3k9mOw')
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_USER_ID
+    )
       .then((response) => {
         console.log('Email sent successfully:', response.status, response.text);
         alert('Your request has been sent successfully!');
@@ -91,8 +96,7 @@ function Contact() {
         </div>
         <button type="submit" className="button">Submit</button>
       </form>
-    <Tetris /> {/* Adding Tetris component */}
-
+      <Tetris /> {/* Adding Tetris component */}
     </section>
   );
 }

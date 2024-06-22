@@ -2,18 +2,19 @@
 
 .header {
   background: #333;
-  padding: 1rem;
+  padding: 0.5rem;
   position: relative;
 }
 
 .header-title {
   color: white;
   margin-bottom: 1rem;
-  font-size: 2rem; /* Adjust font size as needed */
+  font-size: 3.5rem; /* Adjust font size as needed */
   display: flex;
   justify-content: center;
   animation: wave 3s infinite;
   flex-wrap: wrap;
+  font-family: 'Coco', sans-serif, large; /* Apply Coco font */
 }
 
 .header-title span {
@@ -72,6 +73,7 @@
 }
 
 .header nav ul li a {
+  font-family: 'Coco', sans-serif; /* Apply Coco font */
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -79,6 +81,7 @@
   border: 2px solid white; /* Box around the navbar items */
   border-radius: 5px; /* Rounded corners for the box */
   transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+  
 }
 
 /* Hover effects with distinct colors */
@@ -157,7 +160,7 @@
 
 @media (max-width: 480px) {
   .header-title {
-      font-size: 1.2rem; /* Even smaller font size for very small screens */
+      font-size: 2rem; /* Even smaller font size for very small screens */
   }
 
   .header nav ul li a {
