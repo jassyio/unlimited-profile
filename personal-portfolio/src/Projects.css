@@ -1,73 +1,155 @@
-/* src/components/Projects.css */
+/* Default Light Mode */
 .projects {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .projects h2 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .project-item {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-item h3 {
-    font-size: 1.5rem;
-    color: #333;
-  }
-  
-  .project-item p {
-    font-size: 1.2rem;
-    color: #666;
-  }
-  
-  .project-item a {
-    color: #1e90ff;
-    text-decoration: none;
-  }
-  
-  .project-item a:hover {
-    text-decoration: underline;
-  }
-  
-  .triangle-animation {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .triangle {
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid;
-  }
-  
-  .red {
-    border-bottom-color: #f00; /* Red color */
-  }
-  
-  .blue {
-    border-bottom-color: #00f; /* Blue color */
-  }
-  
-  .green {
-    border-bottom-color: #0f0; /* Green color */
-  }
-  
+  margin: 20px;
+  padding: 20px;
+  background-color: #f1c605;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #d2f123;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #eee8e8;
+}
+
+.project-item p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.project-item a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+.triangle-animation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid;
+}
+
+.red {
+  border-bottom-color: #f00; /* Red color */
+}
+
+.blue {
+  border-bottom-color: #00f; /* Blue color */
+}
+
+.green {
+  border-bottom-color: #0f0; /* Green color */
+}
+
+/* Dark Mode */
+.projects.dark {
+  background-color: #2e2d2d;
+  color: #ffffff;
+}
+
+.projects.dark .project-item {
+  background-color: #474646;
+  color: #f1eaea;
+}
+
+.projects.dark .project-item h3 {
+  color: #ffffff;
+}
+
+.projects.dark .project-item p {
+  color: #cccccc;
+}
+
+.projects.dark .project-item a {
+  color: #1e90ff;
+}
+
+.projects.dark .project-item a:hover {
+  text-decoration: underline;
+}
+
+/* Classic Mode */
+.projects.classic {
+  background-color: #f7931a;
+  color: #333333;
+  font-family: 'Times New Roman', serif;
+}
+
+.projects.classic .project-item {
+  background-color: #e49f0b;
+  color: #333333;
+}
+
+.projects.classic .project-item h3 {
+  color: #000000;
+}
+
+.projects.classic .project-item p {
+  color: #333333;
+}
+
+.projects.classic .project-item a {
+  color: #1e90ff;
+}
+
+.projects.classic .project-item a:hover {
+  text-decoration: underline;
+}
+
+/* Color Mode */
+.projects.color {
+  background-color: var(--navbar-hover-background); /* Same color as on hover */
+  color: #f5f108;
+}
+
+.projects.color .project-item {
+  background-color: #597412ce;
+  color: #e7c119;
+}
+
+.projects.color .project-item h3 {
+  color: #f4f803;
+}
+
+.projects.color .project-item p {
+  color: #aafa15;
+}
+
+.projects.color .project-item a {
+  color: #33ff57; /* Change to a contrasting color */
+}
+
+.projects.color .project-item a:hover {
+  text-decoration: underline;
+  color: #f7faef;
+}

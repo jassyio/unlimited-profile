@@ -14,7 +14,7 @@
   justify-content: center;
   animation: wave 3s infinite;
   flex-wrap: wrap;
-  font-family: 'Coco', sans-serif, large; /* Apply Coco font */
+  font-family: 'Goblock Heavy Font', sans-serif; /* Example font */
 }
 
 .header-title span {
@@ -37,7 +37,7 @@
 .header-title span:nth-child(4) { color: #FF33FF; }
 .header-title span:nth-child(5) { color: #33FFFF; }
 .header-title span:nth-child(6) { color: #FFFF33; }
-.header-title span:nth-child(7) { color: #FF5733; }
+.header-title span:nth-child(7) { color: #FF5733; } /* Assign color for the 7th character */
 .header-title span:nth-child(8) { color: #33FF57; }
 .header-title span:nth-child(9) { color: #5733FF; }
 .header-title span:nth-child(10) { color: #FF33FF; }
@@ -81,7 +81,6 @@
   border: 2px solid white; /* Box around the navbar items */
   border-radius: 5px; /* Rounded corners for the box */
   transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
-  
 }
 
 /* Hover effects with distinct colors */
@@ -121,6 +120,12 @@
   transform: scale(1.1); /* Zoom effect on hover */
 }
 
+.header nav ul li:nth-child(7) a:hover {
+  color: #ff3388; /* Color for the 7th item on hover */
+  border-color: #ff3388; /* Border color for the 7th item on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
 .click-effect {
   position: absolute;
   width: 50px;
@@ -129,7 +134,59 @@
   border-radius: 50%;
   transform: scale(0);
   animation: burst 0.5s ease-out forwards;
+}/* Light Mode */
+.header {
+  background: #333;
+  padding: 0.5rem;
+  position: relative;
 }
+
+.header-title {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  animation: wave 3s infinite;
+  flex-wrap: wrap;
+  font-family: 'Coco', sans-serif, large;
+}
+
+/* Dark Mode */
+.header.dark {
+  background: #222;
+}
+
+.header-title.dark {
+  color: #fff;
+}
+/* Light Mode */
+.header {
+  background: #333;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.header-title {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  animation: wave 3s infinite;
+  flex-wrap: wrap;
+  font-family: 'Coco', sans-serif, large;
+}
+
+/* Dark Mode */
+.header.dark {
+  background: #222;
+}
+
+.header-title.dark {
+  color: #fff;
+}
+
 
 @keyframes burst {
   to {
@@ -166,4 +223,68 @@
   .header nav ul li a {
       padding: 0.5rem 1.5rem; /* Adjust padding for very small screens */
   }
+}
+/* Light Mode */
+.header {
+  background: #333;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.header-title {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  animation: wave 3s infinite;
+  flex-wrap: wrap;
+  font-family: 'Coco', sans-serif, large;
+}
+
+.header-title span {
+  display: inline-block;
+  transition: color 0.3s ease;
+  animation: wave 3s infinite ease-in-out;
+}
+
+.header-title span:nth-child(odd) {
+  animation-delay: 0s;
+}
+
+.header-title span:nth-child(even) {
+  animation-delay: 0.3s;
+}
+
+/* Dark Mode */
+.header.dark {
+  background: #222;
+}
+
+.header-title.dark {
+  color: #fff;
+}
+
+/* Classic Mode */
+.header.classic {
+  background: gold;
+  padding: 0.5rem;
+}
+
+.header-title.classic {
+  color: #000;
+  animation: none;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Color Mode */
+.header.color {
+  background:rgb(128, 233, 68); /* Default background color */
+  padding: 0.5rem;
+}
+
+.header-title.color {
+  color: #fff;
+  animation: wave 3s infinite;
+  font-family: 'Coco', sans-serif;
 }

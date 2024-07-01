@@ -1,44 +1,101 @@
-/* src/components/CertificatesAndAwards.css */
+/* Default Light Mode */
 .certificates-awards {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .certificates-awards h2 {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-  }
-  
-  .certificates,
-  .awards {
-    margin-top: 20px;
-  }
-  
-  .certificates h3,
-  .awards h3 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .certificates ul,
-  .awards ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .certificates li,
-  .awards li {
-    font-size: 1.2rem;
-    color: #666;
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificates-awards h2 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.certificates,
+.awards {
+  margin-top: 20px;
+}
+
+.certificates h3,
+.awards h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.certificates ul,
+.awards ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.certificates li,
+.awards li {
+  font-size: 1.2rem;
+  color: #666;
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+.certificates-awards.dark {
+  background-color: #4b4646;
+  color: #ffffff;
+}
+
+.certificates-awards.dark h2 {
+  color: #ffffff;
+}
+
+.certificates-awards.dark h3 {
+  color: #ffffff;
+}
+
+.certificates-awards.dark li {
+  color: #cccccc;
+  background-color: #333333;
+}
+
+/* Classic Mode */
+.certificates-awards.classic {
+  background-color: goldenrod;
+  color: #333333;
+  font-family: 'Times New Roman', serif;
+}
+
+.certificates-awards.classic h2 {
+  color: #000000;
+}
+
+.certificates-awards.classic h3 {
+  color: #000000;
+}
+
+.certificates-awards.classic li {
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* Color Mode */
+.certificates-awards.color {
+  background-color: rgba(90, 178, 32, 0.863); /* Same color as on hover */
+  color: #ffffff;
+}
+
+.certificates-awards.color h2 {
+  color: #ffffff;
+}
+
+.certificates-awards.color h3 {
+  color: #ffffff;
+}
+
+.certificates-awards.color li {
+  color: #ffffff;
+  background-color: var(--navbar-hover-background); /* Same color as on hover */
+}

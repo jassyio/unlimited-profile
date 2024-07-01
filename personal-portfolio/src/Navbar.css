@@ -1,0 +1,181 @@
+:root {
+  --navbar-background: none;
+  --navbar-text: #e23d74;
+  --navbar-hover-background: none;
+  --navbar-hover-text: none;
+  --color-mode-hover: #6a0dad; /* Purple color for Color Mode button on hover */
+  --dropdown-background: hsl(0, 22%, 15%); /* Dark background for dropdown menu */
+  --dropdown-text: #fff; /* Light text color for dropdown menu */
+  --dropdown-hover-background:none; /* Hover background for dropdown items */
+}
+
+/* Navbar Styles */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--navbar-background);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav a,
+.dropdown-button {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: var(--navbar-text);
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  border: 2px solid var(--navbar-text); /* Adding border for all items */
+  border-radius: 5px;
+}
+
+.nav a:hover,
+.dropdown-button:hover {
+  background-color: var(--navbar-hover-background);
+  color: var(--navbar-hover-text);
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Ensure the nth-child selector works for the theme button */
+.nav ul li:nth-child(7) .dropdown-button {
+  border-color: var(--navbar-text);
+  color: var(--navbar-text);
+}
+
+/* Additional hover effect for the nth-child(7) */
+.nav ul li:nth-child(7) .dropdown-button:hover {
+  background-color: var(--navbar-hover-background);
+  color: var(--navbar-hover-text);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--dropdown-background);
+  border: 1px solid var(--navbar-text);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1; /* Ensure it appears above other content */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--dropdown-text);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu li button:hover {
+  background-color: var(--dropdown-hover-background);
+  color: var(--dropdown-text);
+}
+
+.dropdown-menu li button.color-mode:hover {
+  background-color: var(--color-mode-hover);
+  color: var(--dropdown-text);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .header nav ul {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center; /* Center align the menu items */
+  }
+
+  .header nav ul li {
+    margin: 10px 0; /* Add vertical spacing between menu items */
+  }
+
+  .header nav ul li a {
+    padding: 0.5rem 2rem; /* Increase padding for better touch targets */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 2rem; /* Even smaller font size for very small screens */
+  }
+
+  .header nav ul li a {
+    padding: 0.5rem 1.5rem; /* Adjust padding for very small screens */
+  }
+}
+
+/* Light Mode */
+.nav ul li a {
+  font-family: 'Coco', sans-serif;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark Mode */
+.nav.dark ul li a {
+  color: #fff;
+  border-color: #fff;
+}
+
+.nav.dark ul li a:hover {
+  color: #ff5733;
+  border-color: #ff5733;
+}
+
+/* Classic Mode */
+.nav.classic ul li a {
+  color: #000;
+  border-color: #000;
+  font-family: 'Times New Roman', serif;
+}
+
+.nav.classic ul li a:hover {
+  color: #555;
+  border-color: #555;
+}
+
+/* Color Mode */
+.nav.color ul li a {
+  color: #fff;
+  border-color: #ff5733; /* Default border color */
+}
+
+.nav.color ul li a:hover {
+  color: #33ff57; /* Change this to other colors as needed */
+  border-color: #33ff57;
+}

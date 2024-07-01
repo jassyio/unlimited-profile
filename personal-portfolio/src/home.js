@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Home.css';
 import Tetris from './tetris';
+import { Theme } from './theme';
 
 const Home = () => {
+  const { theme } = useContext(Theme);
+
   return (
-    <div className="home">
+    <div className={`home ${theme}`}>
       <section className="welcome">
         <h1>Welcome to Unlimited Developer</h1>
         <p className="tagline">A Swiss Knife for All Your Dev Needs!</p>
@@ -26,7 +29,7 @@ const Home = () => {
         <p>Let's work together on your next project! <a href="/contact">Contact me</a> to get started.</p>
       </section>
       
-      <Tetris />
+      {theme !== 'classic' && <Tetris />}
     </div>
   );
 };

@@ -1,10 +1,12 @@
-// src/Footer.js
-import React from 'react';
+import React, { useContext } from 'react';
 import './Footer.css';
+import { Theme } from './theme'; // Ensure this is the correct path
 
 const Footer = () => {
+  const { theme } = useContext(Theme);
+
   return (
-    <footer className="footer">
+    <footer className={`footer ${theme}`}>
       <div className="social-icons">
         <div className="social-icon">
           <i className="fab fa-whatsapp"></i>

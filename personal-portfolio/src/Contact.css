@@ -1,65 +1,134 @@
-/* src/Contact.css */
-
+/* Default Light Mode */
 .contact {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #282c34;
-  }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .contact input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .checkbox-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .checkbox-group label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .contact button {
-    padding: 10px 20px;
-    background-color: #282c34;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact button:hover {
-    background-color: #ff5733;
-  }
-  
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #282c34;
+  font-size: 2.5rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact label {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact input[type="email"],
+.contact input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+}
+
+.contact input[type="email"]:focus,
+.contact input[type="checkbox"]:focus {
+  border-color: #ff5733;
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.contact button {
+  padding: 15px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.contact button:hover {
+  background-color: #ff5733;
+}
+
+/* Dark Mode */
+.contact.dark {
+  background: #1e1e1e;
+  color: #ffffff;
+}
+
+.contact.dark h2,
+.contact.dark label {
+  color: #ffffff;
+}
+
+.contact.dark input[type="email"] {
+  background: #8d8585;
+  color: #ffffff;
+  border: 1px solid #555555;
+}
+
+.contact.dark input[type="email"]:focus {
+  border-color: #ff5733;
+}
+
+/* Classic Mode */
+.contact.classic {
+  background: goldenrod;
+  color: #333333;
+  font-family: 'Times New Roman', serif;
+}
+
+.contact.classic h2 {
+  color: #000000;
+}
+
+.contact.classic input[type="email"] {
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+}
+
+.contact.classic input[type="email"]:focus {
+  border-color: #ff5733;
+}
+
+/* Color Mode */
+.contact.color {
+  background:greenyellow;
+  color: #ffffff;
+}
+
+.contact.color h2 {
+  color: #ffffff;
+}
+
+.contact.color input[type="email"] {
+  background: #03364e;
+  color: #ffffff;
+  border: 1px solid #ff5733;
+}
+
+.contact.color input[type="email"]:focus {
+  border-color: #ffffff;
+}

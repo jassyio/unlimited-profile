@@ -1,51 +1,70 @@
-/* Example in src/components/About.css */
+/* Default Light Mode */
 .about {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .about h2 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #666;
-  }
-  
-  .candy-crush-container {
-    margin-top: 20px; /* Adjust margin as needed */
-    display: flex;
-    justify-content: center;
-  }
-  
-  .candy-crush-animation {
-    display: grid;
-    grid-template-columns: repeat(3, 100px); /* Adjust grid columns as needed */
-    grid-gap: 10px; /* Adjust grid gap as needed */
-  }
-  
-  .block {
-    height: 100px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  .red {
-    background-color: #f00; /* Red color */
-  }
-  
-  .blue {
-    background-color: #00f; /* Blue color */
-  }
-  
-  .green {
-    background-color: #0f0; /* Green color */
-  }
-  
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #d4d4ce;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Dark Mode */
+.about.dark {
+  background-color: #585252;
+  color: #e5e3ec;
+}
+
+.about-content.dark h2 {
+  color: #ffffff;
+}
+
+.about-content.dark p {
+  color: #cccccc;
+}
+
+/* Classic Mode */
+.about.classic {
+  background-color: #c47414;
+  font-family: 'Times New Roman', serif;
+}
+
+.about-content.classic h2 {
+  color: #000000;
+}
+
+.about-content.classic p {
+  color: #333333;
+}
+
+/* Color Mode */
+.about.color {
+  background-color: #3bf801d3; /* Example background color */
+  color: #ffffff;
+}
+
+.about-content.color h2 {
+  color: #ffffff;
+}
+
+.about-content.color p {
+  color: #ffffff;
+}

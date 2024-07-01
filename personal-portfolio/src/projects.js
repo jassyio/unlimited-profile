@@ -1,11 +1,13 @@
-// src/components/Projects.js
-import React from 'react';
-import './Projects.css'; // Importing the CSS file
-import Tetris from './tetris'; // Importing the Tetris component
+import React, { useContext } from 'react';
+import './Projects.css';
+import Tetris from './tetris';
+import { Theme } from './theme';
 
 function Projects() {
+  const { theme } = useContext(Theme);
+
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className={`projects ${theme}`}>
       <h2>Projects</h2>
       <div className="project-list">
         <div className="project-item">
@@ -25,8 +27,7 @@ function Projects() {
           <p>A dice game made with jQuery and CSS, hosted and working.</p>
         </div>
       </div>
-      
-      <Tetris /> {/* Adding Tetris component */}
+      <Tetris />
     </section>
   );
 }
