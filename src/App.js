@@ -1,22 +1,24 @@
-// src/App.js
-import React from 'react';
+// App.js
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import './style.css';
 import Header from './header';
 import About from './about';
 import Skills from './skills';
 import Projects from './projects';
 import Certificates from './certificates';
 import Footer from './footer';
-import Chat from './chat'
+import Chat from './chat';
 import Home from './home';
 import Contact from './contact';
+import { Theme } from './theme'; // Correct import
 
 function App() {
+  const { theme } = useContext(Theme);
+
   return (
-    <Router>
-      <div className="App">
+    <div className={`App ${theme}`} data-theme={theme}>
+      <Router>
         <Header />
         <div className="main-content">
           <Routes>
@@ -26,12 +28,13 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/certificates" element={<Certificates />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/theme" element={<Theme />} />
           </Routes>
           <Chat />
         </div>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

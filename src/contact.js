@@ -1,10 +1,11 @@
-// src/components/Contact.js
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import emailjs from 'emailjs-com';
-import './Contact.css'; // Importing the CSS file
+import './Contact.css';
 import Tetris from './tetris';
+import { Theme } from './theme';
 
 function Contact() {
+  const { theme } = useContext(Theme);
   const [formData, setFormData] = useState({
     email: '',
     services: [],
@@ -41,9 +42,6 @@ function Contact() {
       services: formData.services,
     };
 
-    // Log templateParams for debugging
-    console.log('Template Params:', templateParams);
-
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -51,19 +49,16 @@ function Contact() {
       process.env.REACT_APP_EMAILJS_USER_ID
     )
       .then((response) => {
-        console.log('Email sent successfully:', response.status, response.text);
         alert('Your request has been sent successfully!');
-        // Reset form
         setFormData({ email: '', services: [] });
       })
       .catch((err) => {
-        console.error('Failed to send email:', err);
         alert('Failed to send your request. Please try again.');
       });
   };
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className={`contact ${theme}`}>
       <h2>Contact Me</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -96,7 +91,7 @@ function Contact() {
         </div>
         <button type="submit" className="button">Submit</button>
       </form>
-      <Tetris /> {/* Adding Tetris component */}
+      <Tetris />
     </section>
   );
 }

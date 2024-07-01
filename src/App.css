@@ -1,17 +1,39 @@
-/* src/App.css */
-.App {
-    text-align: center;
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    transform: 0.3 ease;
-  }
-  
+:root {
+  --navbar-background:none; /* Default background */
+  --navbar-text: #f7f3f3; /* Default text color */
+  --navbar-hover-background: none; /* Default hover background */
+  --navbar-hover-text: #000; /* Default hover text color */
+  --navbar-border-color: #ccc; /* Default border color */
+}
+
+body.light-mode {
+  --navbar-background: none;
+  --navbar-text: #000;
+  --navbar-hover-background:none;
+  --navbar-hover-text: #000;
+  --navbar-border-color: #ccc;
+}
+
+body.dark-mode {
+  --navbar-background: none;
+  --navbar-text: #fff;
+  --navbar-hover-background: none;
+  --navbar-hover-text: #fff;
+  --navbar-border-color: #444;
+}
+
+body.classic-mode {
+  --navbar-background: none;
+  --navbar-text: #000;
+  --navbar-hover-background:none;
+  --navbar-hover-text: #000;
+  --navbar-border-color: #bbb;
+}
+
+body.color-mode {
+  --navbar-background: #ffcc00; /* Example color, adjust as needed */
+  --navbar-text: #000;
+  --navbar-hover-background: #ff9900; /* Example hover color, adjust as needed */
+  --navbar-hover-text: #000;
+  --navbar-border-color: #ff8800; /* Example border color, adjust as needed */
+}
