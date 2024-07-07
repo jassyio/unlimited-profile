@@ -2,8 +2,8 @@
 .light .header,
 .light .footer,
 .light .content {
-  background-color: #ffffff; /* Change white background areas */
-  color: #000000; /* Adjust text color for visibility */
+  background-color: #4e4b4b; /* Change white background areas */
+  color: #e7e2e2; /* Adjust text color for visibility */
 }
 
 /* Dark Mode */
