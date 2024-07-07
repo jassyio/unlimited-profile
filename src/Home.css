@@ -8,19 +8,37 @@
   justify-content: space-between;
 }
 
-.home.light, .home.classic {
+/* Backgrounds */
+.home.light {
   background-color: #f3f3f3;
 }
 
 .home.dark {
   background-color: #222;
+}
+
+.home.classic {
+  background-color: #c47414;
+}
+
+.home.color {
+  background-color: #ff5733;
+}
+
+/* Text Colors */
+.home.light, .home.classic {
+  color: #282c34;
+}
+
+.home.dark {
   color: #ddd;
 }
 
 .home.color {
-  background-color: #ff5733; /* Example color, change based on theme */
+  color: #fff;
 }
 
+/* Welcome Section */
 .welcome {
   text-align: center;
 }
@@ -57,6 +75,7 @@
   color: #fff;
 }
 
+/* Mission and Vision Sections */
 .mission-vision {
   display: flex;
   justify-content: space-between;
@@ -99,6 +118,7 @@
   color: #fff;
 }
 
+/* Hire Me Section */
 .hire-me {
   text-align: center;
 }
@@ -140,7 +160,7 @@
 }
 
 .hire-me.light a, .hire-me.classic a {
-  color: #ff5733;
+  color: #f7aa98;
 }
 
 .hire-me.dark a {

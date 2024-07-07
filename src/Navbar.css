@@ -6,7 +6,7 @@
   --color-mode-hover: #6a0dad; /* Purple color for Color Mode button on hover */
   --dropdown-background: hsl(0, 22%, 15%); /* Dark background for dropdown menu */
   --dropdown-text: #fff; /* Light text color for dropdown menu */
-  --dropdown-hover-background:none; /* Hover background for dropdown items */
+  --dropdown-hover-background: none; /* Hover background for dropdown items */
 }
 
 /* Navbar Styles */
@@ -39,27 +39,8 @@
   border-radius: 5px;
 }
 
-.nav a:hover,
-.dropdown-button:hover {
-  background-color: var(--navbar-hover-background);
-  color: var(--navbar-hover-text);
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
 .dropdown {
   position: relative;
-}
-
-/* Ensure the nth-child selector works for the theme button */
-.nav ul li:nth-child(7) .dropdown-button {
-  border-color: var(--navbar-text);
-  color: var(--navbar-text);
-}
-
-/* Additional hover effect for the nth-child(7) */
-.nav ul li:nth-child(7) .dropdown-button:hover {
-  background-color: var(--navbar-hover-background);
-  color: var(--navbar-hover-text);
 }
 
 .dropdown-menu {
@@ -74,7 +55,7 @@
   z-index: 1; /* Ensure it appears above other content */
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown-menu.open {
   display: block;
 }
 
@@ -96,12 +77,10 @@
 
 .dropdown-menu li button:hover {
   background-color: var(--dropdown-hover-background);
-  color: var(--dropdown-text);
 }
 
 .dropdown-menu li button.color-mode:hover {
   background-color: var(--color-mode-hover);
-  color: var(--dropdown-text);
 }
 
 /* Responsive styles */
@@ -134,48 +113,77 @@
   }
 }
 
+/* Keyframe Animations */
+@keyframes flip {
+  0% { transform: rotateY(0); }
+  50% { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes turn {
+  0% { transform: rotate(0); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+@keyframes zoomOut {
+  0% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blast {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Theme-specific styles */
+
 /* Light Mode */
-.nav ul li a {
-  font-family: 'Coco', sans-serif;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  position: relative;
-  border: 2px solid white;
-  border-radius: 5px;
-  transition: color 0.3s ease, border-color 0.3s ease;
+.light .nav a:hover,
+.light .dropdown-button:hover {
+  animation: wiggle 1s ease-in-out;
 }
 
 /* Dark Mode */
-.nav.dark ul li a {
-  color: #fff;
-  border-color: #fff;
-}
-
-.nav.dark ul li a:hover {
-  color: #ff5733;
-  border-color: #ff5733;
+.dark .nav a:hover,
+.dark .dropdown-button:hover {
+  animation: flip 3s ease-in-out;
 }
 
 /* Classic Mode */
-.nav.classic ul li a {
-  color: #000;
-  border-color: #000;
-  font-family: 'Times New Roman', serif;
-}
-
-.nav.classic ul li a:hover {
-  color: #555;
-  border-color: #555;
+.classic .nav a:hover,
+.classic .dropdown-button:hover {
+  animation: zoomOut 1s ease-in-out;
 }
 
 /* Color Mode */
-.nav.color ul li a {
-  color: #fff;
-  border-color: #ff5733; /* Default border color */
-}
-
-.nav.color ul li a:hover {
-  color: #33ff57; /* Change this to other colors as needed */
-  border-color: #33ff57;
+.color .nav a:hover,
+.color .dropdown-button:hover {
+  animation: wiggle 0.5s ease-in-out, flip 1s ease-in-out, blast 1.5s ease-in-out;
 }

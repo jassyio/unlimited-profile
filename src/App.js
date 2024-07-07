@@ -11,7 +11,7 @@ import Footer from './footer';
 import Chat from './chat';
 import Home from './home';
 import Contact from './contact';
-import { Theme } from './theme'; // Correct import
+import Theme  from './theme'; // Correct import
 
 function App() {
   const { theme } = useContext(Theme);
