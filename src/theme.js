@@ -1,9 +1,16 @@
-import React, { createContext, useState } from 'react';
+// src/theme.js
+import React, { createContext, useState, useEffect } from 'react';
 
 export const Theme = createContext();
 
 const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light'); // Default to light mode
+  const storedTheme = localStorage.getItem('theme');
+  const [theme, setTheme] = useState(storedTheme || 'light');
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    document.documentElement.className = theme; // Apply theme class to the document element
+  }, [theme]);
 
   const changeTheme = (newTheme) => {
     setTheme(newTheme);

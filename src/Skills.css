@@ -3,20 +3,55 @@
   margin: 20px;
   padding: 20px;
   padding-bottom: 10px;
-  background-color: #c2b4b4;
+  background-color: #f3f3f3;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.skills.dark {
+  background-color: #222;
+}
+
+.skills.classic {
+  background-color: #c47414;
+  font-family: 'Times New Roman', serif;
+}
+
+.skills.color {
+  background-color: rgba(108, 192, 30, 0.74);
+}
+
 .skills h2 {
   font-size: 2.5rem;
-  color: #333;
+}
+
+.skills.light h2, .skills.classic h2 {
+  color: #282c34;
+}
+
+.skills.dark h2 {
+  color: #ddd;
+}
+
+.skills.color h2 {
+  color: #fff;
 }
 
 .skills p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #666;
+}
+
+.skills.light p, .skills.classic p {
+  color: #333;
+}
+
+.skills.dark p {
+  color: #bbb;
+}
+
+.skills.color p {
+  color: #fff;
 }
 
 .skill-animation {
@@ -42,47 +77,4 @@
 
 .green {
   background-color: #0f0; /* Green color */
-}
-
-/* Dark Mode */
-.skills.dark {
-  background-color: #302b2b;
-  color: #ffffff;
-}
-
-.skills.dark h2 {
-  color: #ffffff;
-}
-
-.skills.dark p {
-  color: #cccccc;
-}
-
-/* Classic Mode */
-.skills.classic {
-  background-color: #fc8d05;
-  color: #333333;
-  font-family: 'Times New Roman', serif;
-}
-
-.skills.classic h2 {
-  color: #000000;
-}
-
-.skills.classic p {
-  color: #333333;
-}
-
-/* Color Mode */
-.skills.color {
-  background-color:rgba(108, 192, 30, 0.74); /* Same color as on hover */
-  color: #ffffff;
-}
-
-.skills.color h2 {
-  color: #ffffff;
-}
-
-.skills.color p {
-  color: #ffffff;
 }
