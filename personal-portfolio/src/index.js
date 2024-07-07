@@ -1,13 +1,12 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Theme from './theme';
+import ThemeProvider from './theme'; // Adjust import based on your folder structure
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Theme>
-      <App />
-    </Theme>
-  </React.StrictMode>,
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>,
   document.getElementById('root')
 );

@@ -1,39 +1,31 @@
-:root {
-  --navbar-background:none; /* Default background */
-  --navbar-text: #f7f3f3; /* Default text color */
-  --navbar-hover-background: none; /* Default hover background */
-  --navbar-hover-text: #000; /* Default hover text color */
-  --navbar-border-color: #ccc; /* Default border color */
+/* Light Mode */
+.light .header,
+.light .footer,
+.light .content {
+  background-color: #ffffff; /* Change white background areas */
+  color: #000000; /* Adjust text color for visibility */
 }
 
-body.light-mode {
-  --navbar-background: none;
-  --navbar-text: #000;
-  --navbar-hover-background:none;
-  --navbar-hover-text: #000;
-  --navbar-border-color: #ccc;
+/* Dark Mode */
+.dark .header,
+.dark .footer,
+.dark .content {
+  background-color: #333333; /* Example dark background */
+  color: #ffffff; /* Example light text color */
 }
 
-body.dark-mode {
-  --navbar-background: none;
-  --navbar-text: #fff;
-  --navbar-hover-background: none;
-  --navbar-hover-text: #fff;
-  --navbar-border-color: #444;
+/* Classic Mode */
+.classic .header,
+.classic .footer,
+.classic .content {
+  background-color: #b16305; /* Example classic mode background */
+  color: #ffffff; /* Example light text color */
 }
 
-body.classic-mode {
-  --navbar-background: none;
-  --navbar-text: #000;
-  --navbar-hover-background:none;
-  --navbar-hover-text: #000;
-  --navbar-border-color: #bbb;
-}
-
-body.color-mode {
-  --navbar-background: #ffcc00; /* Example color, adjust as needed */
-  --navbar-text: #000;
-  --navbar-hover-background: #ff9900; /* Example hover color, adjust as needed */
-  --navbar-hover-text: #000;
-  --navbar-border-color: #ff8800; /* Example border color, adjust as needed */
+/* Color Mode */
+.color .header,
+.color .footer,
+.color .content {
+  background-color: rgb(130, 228, 50); /* Example color mode background */
+  color: #000000; /* Example text color */
 }

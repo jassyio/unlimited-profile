@@ -1,6 +1,7 @@
+// src/components/Footer.js
 import React, { useContext } from 'react';
+import { Theme } from './theme';
 import './Footer.css';
-import { Theme } from './theme'; // Ensure this is the correct path
 
 const Footer = () => {
   const { theme } = useContext(Theme);

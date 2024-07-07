@@ -3,12 +3,28 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #d4d4ce;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Arial', sans-serif;
+}
+
+.about.light {
+  background-color: #f3f3f3;
+}
+
+.about.dark {
+  background-color: #222;
+}
+
+.about.classic {
+  background-color: #c47414;
+  font-family: 'Times New Roman', serif;
+}
+
+.about.color {
+  background-color: #3bf801d3;
 }
 
 .about-content {
@@ -18,53 +34,33 @@
 .about-content h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #333;
 }
 
 .about-content p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #666;
 }
 
-/* Dark Mode */
-.about.dark {
-  background-color: #585252;
-  color: #e5e3ec;
+.about.light .about-content h2, .about.classic .about-content h2 {
+  color: #282c34;
 }
 
-.about-content.dark h2 {
-  color: #ffffff;
+.about.dark .about-content h2 {
+  color: #ddd;
 }
 
-.about-content.dark p {
-  color: #cccccc;
+.about.color .about-content h2 {
+  color: #fff;
 }
 
-/* Classic Mode */
-.about.classic {
-  background-color: #c47414;
-  font-family: 'Times New Roman', serif;
+.about.light .about-content p, .about.classic .about-content p {
+  color: #333;
 }
 
-.about-content.classic h2 {
-  color: #000000;
+.about.dark .about-content p {
+  color: #bbb;
 }
 
-.about-content.classic p {
-  color: #333333;
-}
-
-/* Color Mode */
-.about.color {
-  background-color: #3bf801d3; /* Example background color */
-  color: #ffffff;
-}
-
-.about-content.color h2 {
-  color: #ffffff;
-}
-
-.about-content.color p {
-  color: #ffffff;
+.about.color .about-content p {
+  color: #fff;
 }
