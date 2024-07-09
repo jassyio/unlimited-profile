@@ -6,26 +6,41 @@ import { Theme } from './theme';
 function Projects() {
   const { theme } = useContext(Theme);
 
+  // Define your projects with GitHub links
+  const projects = [
+    {
+      title: 'E-commerce Web App',
+      description: 'A fully developed online gym apparel shop made with React, Node.js, MongoDB, and Tailwind CSS. Hosted on Vercel.',
+      githubLink: 'https://github.com/yourusername/ecommerce-web-app'
+    },
+    {
+      title: 'Weather Forecast Web App',
+      description: 'A weather forecast web app made with React, CSS, and the OpenWeather API, localized in several languages.',
+      githubLink: 'https://github.com/yourusername/weather-forecast-web-app'
+    },
+    {
+      title: 'Football Website',
+      description: 'A football website made with React, Node.js, and MySQL.',
+      githubLink: 'https://github.com/yourusername/football-website'
+    },
+    {
+      title: 'Dice Game',
+      description: 'A dice game made with jQuery and CSS, hosted and working.',
+      githubLink: 'https://github.com/yourusername/dice-game'
+    },
+    // Add more projects as needed
+  ];
+
   return (
     <section id="projects" className={`projects ${theme}`}>
       <h2>Projects</h2>
       <div className="project-list">
-        <div className="project-item">
-          <h3>E-commerce Web App</h3>
-          <p>A fully developed online gym apparel shop made with React, Node.js, MongoDB, and Tailwind CSS. Hosted on Vercel. <a href="your-git-link">GitHub Link</a></p>
-        </div>
-        <div className="project-item">
-          <h3>Weather Forecast Web App</h3>
-          <p>A weather forecast web app made with React, CSS, and the OpenWeather API, localized in several languages.</p>
-        </div>
-        <div className="project-item">
-          <h3>Football Website</h3>
-          <p>A football website made with React, Node.js, and MySQL.</p>
-        </div>
-        <div className="project-item">
-          <h3>Dice Game</h3>
-          <p>A dice game made with jQuery and CSS, hosted and working.</p>
-        </div>
+        {projects.map((project, index) => (
+          <div key={index} className="project-item">
+            <h3>{project.title}</h3>
+            <p>{project.description} <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub Link</a></p>
+          </div>
+        ))}
       </div>
       <Tetris />
     </section>

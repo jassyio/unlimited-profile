@@ -22,6 +22,7 @@
   background: #333;
   padding: 0.5rem;
   position: relative;
+  padding-bottom: 0px;
 }
 
 .header-title {

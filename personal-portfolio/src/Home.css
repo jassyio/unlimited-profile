@@ -1,5 +1,5 @@
 .home {
-  padding: 0;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
@@ -11,164 +11,101 @@
 /* Backgrounds */
 .home.light {
   background-color: #f3f3f3;
-}
-
-.home.dark {
-  background-color: #222;
-}
-
-.home.classic {
-  background-color: #c47414;
-}
-
-.home.color {
-  background-color: #ff5733;
-}
-
-/* Text Colors */
-.home.light, .home.classic {
   color: #282c34;
 }
 
 .home.dark {
+  background-color: #222;
   color: #ddd;
 }
 
+.home.classic {
+  background-color: #c47414;
+  color: #282c34; /* Update as per classic theme preferences */
+}
+
 .home.color {
+  background-color: #9bf138;
   color: #fff;
 }
 
 /* Welcome Section */
 .welcome {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .welcome h1 {
-  font-size: 3rem;
-}
-
-.welcome.light h1, .welcome.classic h1 {
-  color: #282c34;
-}
-
-.welcome.dark h1 {
-  color: #ddd;
-}
-
-.welcome.color h1 {
-  color: #fff;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
 }
 
 .welcome .tagline {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: #070707; /* Adjust tagline color */
 }
 
-.welcome.light .tagline, .welcome.classic .tagline {
-  color: #ff5733;
+/* Mission Section */
+.mission {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
-.welcome.dark .tagline {
-  color: #bbb;
+.mission h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.welcome.color .tagline {
-  color: #fff;
+.mission p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-/* Mission and Vision Sections */
-.mission-vision {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* Vision Section */
+.vision {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
-.mission, .vision {
-  width: 45%;
+.vision h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.mission h2, .vision h2 {
-  font-size: 2rem;
-}
-
-.mission.light h2, .vision.light h2, .mission.classic h2, .vision.classic h2 {
-  color: #282c34;
-}
-
-.mission.dark h2, .vision.dark h2 {
-  color: #ddd;
-}
-
-.mission.color h2, .vision.color h2 {
-  color: #fff;
-}
-
-.mission p, .vision p {
-  font-size: 1rem;
-}
-
-.mission.light p, .vision.light p, .mission.classic p, .vision.classic p {
-  color: #333;
-}
-
-.mission.dark p, .vision.dark p {
-  color: #bbb;
-}
-
-.mission.color p, .vision.color p {
-  color: #fff;
+.vision p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 /* Hire Me Section */
 .hire-me {
   text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
 .hire-me h2 {
-  font-size: 2rem;
-}
-
-.hire-me.light h2, .hire-me.classic h2 {
-  color: #282c34;
-}
-
-.hire-me.dark h2 {
-  color: #ddd;
-}
-
-.hire-me.color h2 {
-  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .hire-me p {
-  font-size: 1rem;
-}
-
-.hire-me.light p, .hire-me.classic p {
-  color: #333;
-}
-
-.hire-me.dark p {
-  color: #bbb;
-}
-
-.hire-me.color p {
-  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .hire-me a {
   text-decoration: none;
-}
-
-.hire-me.light a, .hire-me.classic a {
-  color: #f7aa98;
-}
-
-.hire-me.dark a {
-  color: #bbb;
-}
-
-.hire-me.color a {
-  color: #fff;
+  color: inherit;
+  font-weight: bold;
 }
 
 .hire-me a:hover {

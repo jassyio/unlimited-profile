@@ -1,4 +1,3 @@
-// src/components/Chat.js
 import React, { useState } from 'react';
 import './Chat.css';
 
@@ -13,12 +12,7 @@ const Chat = () => {
   const toggleChat = () => {
     setIsChatOpen(!isChatOpen);
     if (!isNameEntered && !isChatOpen) {
-      setIsNameEntered(true);
-      setTyping(true);
-      setTimeout(() => {
-        setTyping(false);
-        setMessages([...messages, `Hi ${name}, welcome to Unlimited`]);
-      }, 1000); // Simulate typing delay
+      setIsNameEntered(false); // Reset name entered status
     }
   };
 
@@ -28,18 +22,22 @@ const Chat = () => {
     setTyping(true);
     setTimeout(() => {
       setTyping(false);
-      setMessages([...messages, `Hi ${name}, welcome to Unlimited`]);
+      setMessages([`Hello ${name}, how can I help you today?`]);
     }, 1000); // Simulate typing delay
   };
 
   const handleMessageSubmit = (e) => {
     e.preventDefault();
-    setMessages([...messages, input]);
+    setMessages([...messages, `${name}: ${input}`]);
     setInput('');
     setTyping(true);
     setTimeout(() => {
       setTyping(false);
-      setMessages([...messages, input, 'Unlimited will get back to you as soon as possible. Due to the high number of users, this will take a few minutes.']);
+      setMessages([
+        ...messages,
+        `${name}: ${input}`,
+        'Developer will get back to you shortly. Due to high demand, contact us via email at joejassyio@gmail.com. Thank you!'
+      ]);
     }, 1000); // Simulate typing delay
   };
 

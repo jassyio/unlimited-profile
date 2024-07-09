@@ -10,24 +10,24 @@ const Footer = () => {
     <footer className={`footer ${theme}`}>
       <div className="social-icons">
         <div className="social-icon">
-          <i className="fab fa-whatsapp"></i>
-          <span>+1234567890</span>
+          <i className="fab fa-github"></i>
+          <span>Joe Jassy</span>
         </div>
         <div className="social-icon">
           <i className="fab fa-linkedin"></i>
-          <span>linkedin.com/in/yourprofile</span>
+          <span>Joe Jassy </span>
         </div>
         <div className="social-icon">
           <i className="fab fa-twitter"></i>
-          <span>@yourprofile</span>
+          <span>@joejassy</span>
         </div>
         <div className="social-icon">
           <i className="fab fa-telegram"></i>
-          <span>@yourprofile</span>
+          <span>user2121</span>
         </div>
         <div className="social-icon">
           <i className="fas fa-envelope"></i>
-          <span>your.email@example.com</span>
+          <span>joejassyio@gmail.com</span>
         </div>
       </div>
       <div className="footer-text">

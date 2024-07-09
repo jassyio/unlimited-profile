@@ -39,7 +39,7 @@ function Contact() {
 
     const templateParams = {
       email: formData.email,
-      services: formData.services,
+      services: formData.services.join(', '),
     };
 
     emailjs.send(
@@ -60,7 +60,7 @@ function Contact() {
   return (
     <section id="contact" className={`contact ${theme}`}>
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="email">Your Email:</label>
           <input
@@ -74,23 +74,53 @@ function Contact() {
         </div>
         <div className="form-group">
           <label>Services you are interested in:</label>
-          {servicesList.map((service) => (
-            <div key={service} className="checkbox">
-              <label>
-                {service}
+          <div className="services-container">
+            <div className="services-list">
+              {servicesList.map((service) => (
+                <label key={service} className="service-label">
+                  {service}
+                </label>
+              ))}
+            </div>
+            <div className="checkbox-list">
+              {servicesList.map((service) => (
                 <input
+                  key={service}
                   type="checkbox"
                   name="services"
                   value={service}
                   checked={formData.services.includes(service)}
                   onChange={handleChange}
+                  className="service-checkbox"
                 />
-              </label>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
         <button type="submit" className="button">Submit</button>
       </form>
+      <div className="social-icons">
+        <div className="social-icon">
+          <i className="fab fa-github"></i>
+          <span>https://github.com/joejassy</span>
+        </div>
+        <div className="social-icon">
+          <i className="fab fa-linkedin"></i>
+          <span>Joe Jassy</span>
+        </div>
+        <div className="social-icon">
+          <i className="fab fa-twitter"></i>
+          <span>@joejassy</span>
+        </div>
+        <div className="social-icon">
+          <i className="fab fa-telegram"></i>
+          <span>user2121</span>
+        </div>
+        <div className="social-icon">
+          <i className="fas fa-envelope"></i>
+          <span>joejassyio@gmail.com</span>
+        </div>
+      </div>
       <Tetris />
     </section>
   );

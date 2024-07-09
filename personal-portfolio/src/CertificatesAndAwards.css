@@ -1,57 +1,187 @@
-/* Default Light Mode */
-.certificates {
+/* General Section Styles */
+#certificates-awards {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100vh;
-  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Light Mode Styles */
+.certificates-awards.light {
+  background-color: #383535;
+}
+
+.certificates-awards.light h2 {
+  color: #eaecf0;
+}
+.certificates-awards.light p {
+  color: #0c0d0f;
+}
+
+.certificates-awards.light .content {
+  display: flex;
   justify-content: space-between;
 }
 
-.certificates.dark {
+.certificates-awards.light .certificates {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.certificates-awards.light .awards {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.certificates-awards.light h3 {
+  color: #272222;
+}
+
+.certificates-awards.light ul {
+  list-style-type: none;
+  padding: 0;
+  color: #000;
+}
+
+.certificates-awards.light li {
+  margin-bottom: 10px;
+}
+
+/* Dark Mode Styles */
+.certificates-awards.dark {
   background-color: #222;
 }
 
-.certificates.classic {
-  background-color: #c47414;
-  font-family: 'Times New Roman', serif;
-}
-
-.certificates.color {
-  background-color: #00aaff;
-}
-
-.certificates h2 {
-  font-size: 2.5rem;
-}
-
-.certificates.light h2, .certificates.classic h2 {
-  color: #282c34;
-}
-
-.certificates.dark h2 {
+.certificates-awards.dark h2 {
   color: #ddd;
 }
 
-.certificates.color h2 {
-  color: #fff;
+.certificates-awards.dark .content {
+  display: flex;
+  justify-content: space-between;
 }
 
-.certificates p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+.certificates-awards.dark .certificates {
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  width: 45%;
 }
 
-.certificates.light p, .certificates.classic p {
-  color: #333;
+.certificates-awards.dark .awards {
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  width: 45%;
 }
 
-.certificates.dark p {
+.certificates-awards.dark h3 {
   color: #bbb;
 }
 
-.certificates.color p {
-  color: #fff;
+.certificates-awards.dark ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.certificates-awards.dark li {
+  margin-bottom: 10px;
+}
+
+/* Classic Mode Styles */
+.certificates-awards.classic {
+  background-color: #c47414;
+}
+
+.certificates-awards.classic h2 {
+  color: #ffffff;
+}
+
+.certificates-awards.classic .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.certificates-awards.classic .certificates {
+  background-color: #ffd966;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.certificates-awards.classic .awards {
+  background-color: #ffd966;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.certificates-awards.classic h3 {
+  color: #ffffff;
+}
+
+.certificates-awards.classic ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.certificates-awards.classic li {
+  margin-bottom: 10px;
+}
+
+/* Color Mode Styles */
+.certificates-awards.color {
+  background-color: #00aaff;
+}
+
+.certificates-awards.color h2 {
+  color: #ffffff;
+}
+
+.certificates-awards.color .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.certificates-awards.color .certificates {
+  background-color: #33ccff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.certificates-awards.color .awards {
+  background-color: #33ccff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.certificates-awards.color h3 {
+  color: #ffffff;
+}
+
+.certificates-awards.color ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.certificates-awards.color li {
+  margin-bottom: 10px;
 }
