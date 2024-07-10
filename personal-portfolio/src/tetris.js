@@ -17,15 +17,19 @@ const Tetris = () => {
       block.style.animation = `fall ${fallDuration}s linear forwards`;
 
       block.addEventListener('animationend', () => {
-        // Remove block after animation ends to prevent overflow
-        tetrisContainer.removeChild(block);
+        // Ensure block is still a child of tetrisContainer before removing
+        if (tetrisContainer.contains(block)) {
+          tetrisContainer.removeChild(block);
+        }
 
         // Check for blocks that might be piled up and remove them
         const blocks = document.querySelectorAll('.tetris-block');
         blocks.forEach((b) => {
           const rect = b.getBoundingClientRect();
           if (rect.top > tetrisContainer.getBoundingClientRect().bottom - 30) {
-            b.remove();
+            if (tetrisContainer.contains(b)) {
+              tetrisContainer.removeChild(b);
+            }
           }
         });
       });

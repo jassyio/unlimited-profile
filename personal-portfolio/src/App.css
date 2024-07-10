@@ -29,3 +29,8 @@
   background-color: rgb(130, 228, 50); /* Example color mode background */
   color: #000000; /* Example text color */
 }
+body{
+  font-family: 'milgo';
+  src: url('./fonts/Milgo.ttf');
+  padding-top: 10px;
+}

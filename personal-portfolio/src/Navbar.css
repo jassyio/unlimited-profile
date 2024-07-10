@@ -6,7 +6,7 @@
   --color-mode-hover: #6a0dad; /* Purple color for Color Mode button on hover */
   --dropdown-background: hsl(0, 22%, 15%); /* Dark background for dropdown menu */
   --dropdown-text: #fff; /* Light text color for dropdown menu */
-  --dropdown-hover-background: none; /* Hover background for dropdown items */
+  --dropdown-hover-background: rgba(255, 255, 255, 0.1); /* Hover background for dropdown items */
 }
 
 /* Navbar Styles */
@@ -31,7 +31,7 @@
 .nav a,
 .dropdown-button {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   color: var(--navbar-text);
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
@@ -53,10 +53,16 @@
   border-radius: 4px;
   overflow: hidden;
   z-index: 1; /* Ensure it appears above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transform: translateY(10px); /* Start slightly lower */
 }
 
 .dropdown-menu.open {
   display: block;
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to original position */
 }
 
 .dropdown-menu li {
@@ -76,11 +82,11 @@
 }
 
 .dropdown-menu li button:hover {
-  background-color: var(--dropdown-hover-background);
+  background-color: var(--dropdown-hover-background); /* Hover effect */
 }
 
 .dropdown-menu li button.color-mode:hover {
-  background-color: var(--color-mode-hover);
+  background-color: var(--color-mode-hover); /* Specific hover color for color mode */
 }
 
 /* Responsive styles */

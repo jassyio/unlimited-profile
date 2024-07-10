@@ -2,12 +2,13 @@
 #certificates-awards {
   padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-radius: 8px;
 }
 
 /* Light Mode Styles */

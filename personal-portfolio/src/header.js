@@ -10,11 +10,10 @@ const Header = () => {
     <header className={`header ${theme}`}>
       <div className="tagline">
         <h2>Joseph Njaci the ↓</h2>
-        
       </div>
       <h1 className={`header-title ${theme}`}>
         {'Unlimited Developer'.split('').map((char, index) => (
-          <span key={index} className={`${theme === 'classic' ? 'classic-font' : ''}`}>
+          <span key={index}>
             {char}
             {index === 8 && <span>&nbsp;</span>}
           </span>
