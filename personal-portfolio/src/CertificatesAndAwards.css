@@ -146,7 +146,7 @@
 
 /* Color Mode Styles */
 .certificates-awards.color {
-  background-color: #00aaff;
+  background-color: #66ce29;
 }
 
 .certificates-awards.color h2 {
@@ -159,7 +159,7 @@
 }
 
 .certificates-awards.color .certificates {
-  background-color: #33ccff;
+  background-color: #8af532;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -167,7 +167,7 @@
 }
 
 .certificates-awards.color .awards {
-  background-color: #33ccff;
+  background-color: #8af532;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
