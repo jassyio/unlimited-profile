@@ -6,24 +6,17 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "dotenv": "^16.4.5",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.2.11",
-    "preact": "^10.22.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
-    "scripts": "^0.1.0",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "devDependencies": {
-    "preact-cli": "^3.0.0"
-  },
-  "resolutions": {
-    "react": "preact/compat",
-    "react-dom": "preact/compat"
-  },
   "scripts": {
-    "start": "preact watch",
-    "build": "preact build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
