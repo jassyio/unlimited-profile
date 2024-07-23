@@ -1,4 +1,3 @@
-// App.js
 import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -11,7 +10,7 @@ import Footer from './footer';
 import Chat from './chat';
 import Home from './home';
 import Contact from './contact';
-import Theme  from './theme'; // Correct import
+import { Theme } from './theme'; // Correct import
 
 function App() {
   const { theme } = useContext(Theme);
@@ -28,7 +27,6 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/certificates" element={<Certificates />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/theme" element={<Theme />} />
           </Routes>
           <Chat />
         </div>

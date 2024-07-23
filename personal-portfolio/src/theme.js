@@ -1,6 +1,6 @@
-// src/theme.js
 import React, { createContext, useState, useEffect } from 'react';
 
+// Create the Theme context
 export const Theme = createContext();
 
 const ThemeProvider = ({ children }) => {
